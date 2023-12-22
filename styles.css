@@ -1,0 +1,512 @@
+:root {
+    --nav-font-size: 20px;
+    --text-color: black;
+    --light-text-color: #f5f3e9;
+    --title-font-family: 'League Script', cursive;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ecf2f3;
+    margin: 0;
+}
+
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 auto;
+    width: 100%;
+}
+
+
+.nav {
+    border-block: 1px solid;
+    margin: 0 auto;
+}
+
+.nav-items {
+    display: flex;
+    justify-content: space-evenly;
+    padding-block: 10px;
+}
+
+.nav-items a {
+    transition: transform 0.2s;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: var(--nav-font-size);
+    padding-inline: 40px;
+}
+
+.nav-items a:hover {
+    transform: scale(1.1);
+}
+
+.header-banner {
+    background-image: url("img/header-banner.webp");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    min-height: 500px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+main .header-banner::before {
+    content: "";
+    background-color: rgba(236, 242, 243, 0.13);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.header-banner-content {
+    margin: 0 0 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-banner-content h2 {
+    padding: 20px 0;
+    font-size: 80px;
+    color: #464d42;
+    font-family: 'Simonetta', serif;
+}
+
+.header-banner-content h3 {
+    font-size: 20px;
+    color: #464d42;
+    font-family: 'Simonetta', serif;
+}
+
+.header-banner-content h3, .header-banner-content h2 {
+    margin: 0;
+}
+
+
+.out-story {
+    background-color: #2f332c;
+    padding-block: 50px;
+    width: 1440px;
+}
+
+h1.title {
+    padding-bottom: 80px;
+    margin: 0;
+    font-family: 'League Script', cursive;
+    font-size: 120px;
+    color: var(--light-text-color);
+}
+
+.content-area {
+    background-color: #2f332c;
+    display: flex;
+    justify-content: center;
+}
+
+.timeline::after {
+    content: "";
+    background-color: var(--light-text-color);
+    width: 1200px;
+    height: 3px;
+}
+
+.timeline {
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    align-items: center;
+    position: relative;
+}
+
+.timeline-top-elements {
+    display: flex;
+    position: absolute;
+    top: 0;
+    align-items: center;
+}
+
+.timeline-bottom-elements {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    align-items: center;
+}
+
+.timeline .text {
+    text-align: center;
+    width: 180px;
+    font-size: 22px;
+    color: var(--light-text-color);
+    padding-inline: 65px;
+}
+
+.timeline .img {
+    border: 4px solid var(--light-text-color);
+    position: relative;
+}
+
+.timeline-top-elements .img::after {
+    content: "";
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 233px;
+    left: 63px;
+    border-radius: 25px;
+    background-color: var(--light-text-color);
+}
+
+.timeline-bottom-elements .img::before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: -49px;
+    left: 63px;
+    border-radius: 25px;
+    background-color: var(--light-text-color);
+}
+
+.wedding-day-container {
+    background-image: url("img/wedding-day-bg.webp");
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.wedding-day-container .wedding-day {
+    width: 1440px;
+    text-align: center;
+    padding: 10px 0 120px;
+}
+
+.wedding-day-container .wedding-day .title {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 40px;
+    font-size: 100px;
+    font-family: 'Simonetta', serif;
+}
+
+.wedding-day-container .wedding-day .title span ~ span {
+    color: #464d42;
+    margin-top: 100px;
+    padding-inline: 40px;
+}
+
+.wedding-day-container .wedding-day .title span ~ span ~ span {
+    margin-top: 200px;
+}
+
+.wedding-day-container .wedding-day .title span ~ span ~ span, .wedding-day .title span {
+    color: black;
+}
+
+.list-boxes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list-box {
+    background-color: rgba(220, 217, 216, 0.76);
+    margin-bottom: 24px;
+    display: flex;
+    border: 2px solid #655d5d;
+    align-items: center;
+    height: 250px;
+}
+
+.wedding-day-container .img-box {
+    overflow: hidden;
+    height: 100%;
+}
+
+.list-box img {
+    transition: transform 0.6s ease;
+}
+
+.list-box img:hover {
+    transform: scale(120%);
+}
+
+
+.list-box-content {
+    position: relative;
+    z-index: 1;
+    padding-inline: 190px;
+}
+
+.list-box-content p {
+    font-size: 20px;
+    margin-block: 24px;
+}
+
+.list-box-content p ~ p {
+    font-size: 42px;
+    font-family: 'League Script', cursive;
+}
+
+.list-box-content a {
+    padding: 10px 60px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: normal;
+    background-color: #493b26;
+    color: var(--light-text-color);
+    transition: color, background-color 0.5s;
+}
+
+.list-box-content a:hover {
+    color: #493b26;
+    background-color: var(--light-text-color);
+}
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2f332c;
+    padding-block: 24px;
+}
+
+footer .footer-logo img {
+    width: 200px;
+}
+
+footer .back-to-top a {
+    text-decoration: none;
+    color: var(--light-text-color);
+}
+
+footer p {
+    color: var(--light-text-color);
+}
+
+.back-to-top {
+    text-align: center;
+    font-size: 60px;
+}
+
+.back-to-top svg {
+    margin-bottom: -30px;
+}
+
+.back-to-top p {
+    margin: 0;
+}
+
+/*REGISTRY SITE*/
+
+#header-registry .container {
+    display: grid;
+    background-color: #c0b6a8;
+    justify-content: center;
+}
+
+header .header-text p {
+    margin: 20px;
+}
+
+header .header-text a {
+    color: #493b26;
+    text-decoration: none;
+    font-size: 40px;
+    margin: 0;
+}
+
+#registry-main {
+    display: flex;
+    background-color: #c0b6a8;
+    align-items: center;
+    flex-direction: column;
+}
+
+#registry-main .container {
+    padding-block: 140px;
+    width: 1440px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#registry-main .container .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#registry-main .container .row .item ~ .item {
+    margin: 0 20px;
+}
+
+#registry-main .container .row .item ~ .item ~ .item {
+    margin: 0;
+}
+
+#registry-main .container .row ~ .row {
+    margin: 20px 0;
+}
+
+#registry-main .container .row ~ .row ~ .row {
+    margin: 0;
+}
+
+#registry-main .container .row .item {
+    position: relative;
+    display: flex;
+    background-color: #493b26;
+    width: 300px;
+    height: 550px;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+#registry-main .item .img-box {
+    overflow: hidden;
+    width: 100%;
+}
+
+#registry-main .item img {
+    width: 100%;
+    max-height: 100%;
+    transition: transform 0.6s ease;
+}
+
+#registry-main .item img:hover {
+    transform: scale(120%);
+}
+
+#registry-main .item .content-box {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#registry-main .item .content-box h2, #registry-main .item .content-box p {
+    color: #c0b6a8;
+}
+
+#registry-main .item .content-box .buy-btn {
+    text-decoration: none;
+    background-color: #c0b6a8;
+    color: #493b26;
+    padding: 10px 24px;
+    transition: color, background-color 0.3s;
+}
+
+#registry-main .item .content-box .buy-btn:hover {
+    background-color: #493b26;
+    color: #c0b6a8;
+    border: 1px solid #c0b6a8;
+}
+
+/*LOGIN SITE*/
+
+.login-main, .register-main {
+    padding: 120px 0;
+}
+
+.login-page, .register-page {
+    width: 360px;
+    padding: 8% 0 0;
+    margin: auto;
+}
+
+.form {
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.form input {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #493b26;
+    text-decoration: none;
+}
+
+.form-btn{
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: #493b26;
+    width: 100%;
+    border: 2px solid #493b26;
+    padding: 15px;
+    color: #FFFFFF!important;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.form-btn:hover, .form-btn:active, .form-btn:focus {
+    color: #493b26;
+    background: #FFFFFF;
+    border: 2px solid #493b26;
+}
+
+.form .message {
+    margin: 15px 0 0;
+    color: #b3b3b3;
+    font-size: 12px;
+}
+
+.form .message a {
+    color: #493b26;
+    text-decoration: none;
+}
+
+span.reg-text, span a {
+    color: #493b26;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+}
+
+span.reg-text a {
+    font-weight: bolder;
+}
+
