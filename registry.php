@@ -46,11 +46,19 @@ include('functions.php');
         </div>
     </div>
 </header>
+
 <?php
 $query = "SELECT * FROM items WHERE is_available = 1";
 $result = mysqli_query($con, $query);
 
 echo '<main id="registry-main">
+<section class="filterIcons">
+    <div class="filterIcon kitchenBtn" data-category="kitchen"><img src="img/kitchen.png" alt=""></div>
+    <div class="filterIcon livingroomBtn" data-category="livingroom"><img src="img/livingroom.png" alt=""></div>
+    <div class="filterIcon personalBtn" data-category="personal"><img src="img/personal.jpg" alt=""></div>
+</section>
+
+
     <div class="container">';
 
 $itemCount = 0;
@@ -59,7 +67,7 @@ while ($row = mysqli_fetch_assoc($result)) {
         echo '<div class="row">';
     }
 
-    echo '<div class="item">
+    echo '<div class="item ' . $row['category'] . '">
         <div class="img-box">
             <a href="moneyChecker.php?item=' . $row['id'] . '&price=' . $row['price'] . '"><img src="' . $row['img_src'] . '" alt="..."></a>
         </div>
@@ -97,5 +105,7 @@ echo '</div>
 </footer>
 
 
+
 </body>
+<script src="script.js"></script>
 </html>

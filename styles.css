@@ -56,9 +56,9 @@ header .container {
 }
 
 .header-banner {
-    background-image: url("img/header-banner.webp");
+    background-image: url("img/header-banner.png");
     background-attachment: fixed;
-    background-position: center;
+    background-position: 0 -500px;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -345,7 +345,7 @@ header .header-text a {
 }
 
 #registry-main .container {
-    padding-block: 220px;
+    padding-block: 60px;
     width: 1440px;
     display: flex;
     justify-content: center;
@@ -358,13 +358,10 @@ header .header-text a {
     justify-content: center;
 }
 
-#registry-main .container .row .item ~ .item {
-    margin: 0 20px;
+#registry-main .container .row .item {
+    margin-right: 20px;
 }
 
-#registry-main .container .row .item ~ .item ~ .item {
-    margin: 0;
-}
 
 #registry-main .container .row ~ .row {
     margin: 20px 0;
@@ -535,4 +532,29 @@ p.loggedin-user span {
     background-color: #c0b6a8;
     justify-content: center;
     padding-block: 250px;
+}
+
+section.filterIcons {
+    margin-top: 255px;
+    display: flex;
+    width: 600px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.filterIcon img {
+    width: 180px;
+}
+
+.inactive {
+    display: none!important;
+}
+
+.deselected {
+    opacity: 0.3;
+}
+
+.active {
+    display: block;
 }

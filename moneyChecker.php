@@ -85,7 +85,7 @@ include('functions.php');
             </a>';
                 }
             } else {
-                echo '<p class="loggedin-user">User not logged in. Please <a href="login.php">log in</a> to continue.</p>';
+                echo '<p class="loggedin-user">You are not logged in. Please <a href="login.php">log in</a> to continue.</p>';
             }
 
             mysqli_close($con);
