@@ -337,6 +337,7 @@ header .header-text a {
 }
 
 #registry-main {
+    min-height: 100vh;
     display: flex;
     background-color: #c0b6a8;
     align-items: center;
@@ -344,7 +345,7 @@ header .header-text a {
 }
 
 #registry-main .container {
-    padding-block: 140px;
+    padding-block: 220px;
     width: 1440px;
     display: flex;
     justify-content: center;
@@ -480,11 +481,11 @@ a:hover {
     font-size: 14px;
     transition: all 0.3s ease;
     cursor: pointer;
-    margin-bottom: 20px;
+    margin-block: 20px;
 }
 
 .form-btn:hover, .form-btn:active, .form-btn:focus {
-    color: #493b26;
+    color: #493b26!important;
     background: #FFFFFF;
     border: 2px solid #493b26;
 }
@@ -510,3 +511,28 @@ span.reg-text a {
     font-weight: bolder;
 }
 
+p.error-message {
+    color: red;
+}
+
+p.loggedin-user {
+    font-family: "Roboto", sans-serif;
+    color: #493b26;
+    font-size: 25px;
+    margin: 0;
+}
+
+.header-text {
+    text-align: center;
+}
+
+p.loggedin-user span {
+    font-weight: bold;
+}
+
+#header-thanks .container {
+    display: grid;
+    background-color: #c0b6a8;
+    justify-content: center;
+    padding-block: 250px;
+}

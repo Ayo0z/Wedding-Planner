@@ -1,7 +1,16 @@
 <?php
+session_start();
 
+include('connection.php');
+include('functions.php');
+
+if (isset($_SESSION['user'])) {
+    header('Location: registry.php');
+    exit;
+}
 
 ?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -24,12 +33,17 @@
 <main class="login-main">
     <div class="login-page">
         <div class="form">
-            <form class="login-form">
-                <input type="text" placeholder="Your Name"/>
-                <input type="password" placeholder="Invitation Code"/>
-                <button class="form-btn">login</button>
+            <form class="login-form" method="post" action="">
+                <input type="text" name="name" placeholder="Your Name" required/>
+                <input type="password" name="code" placeholder="Invitation Code" required/>
+                <button type="submit" class="form-btn" name="sub">Login</button>
                 <span class="reg-text">Or <a href="register.php">Register</a> now!</span>
             </form>
+            <?php
+            if (isset($loginError)) {
+                echo '<p class="error-message">' . $loginError . '</p>';
+            }
+            ?>
         </div>
     </div>
 </main>
