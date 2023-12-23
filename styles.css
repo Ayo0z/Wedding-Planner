@@ -22,7 +22,6 @@ header {
     margin: 0;
 }
 
-
 header .container {
     display: flex;
     justify-content: space-between;
@@ -30,7 +29,6 @@ header .container {
     margin: 0 0 auto;
     width: 100%;
 }
-
 
 .nav {
     border-block: 1px solid;
@@ -208,7 +206,6 @@ h1.title {
 
 
 .wedding-day-container .wedding-day {
-    width: 1440px;
     text-align: center;
     padding: 10px 0 120px;
 }
@@ -573,4 +570,161 @@ section.filterIcons {
 
 .active {
     display: block;
+}
+
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 1888px) {
+    .header-banner {
+        background-position: center;
+    }
+}
+
+@media only screen and (max-width: 1368px) {
+    .wedding-day-container {
+        background-position: 0;
+    }
+
+}
+
+@media only screen and (max-width: 1231px) {
+    .timeline {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-items a {
+        padding-inline: 20px;
+    }
+
+    .header-banner-content h2 {
+        font-size: 40px;
+    }
+
+    .header-banner-content h3 {
+        font-size: 16px;
+    }
+
+    .out-story {
+        width: 100%;
+    }
+
+    .timeline::after {
+        width: 100%;
+    }
+
+    .timeline img {
+        width: 100px;
+        height: 150px;
+    }
+
+    .wedding-day-container .wedding-day .title {
+        font-size: 60px;
+    }
+
+    .list-box {
+        height: auto;
+    }
+
+    .list-box img {
+        transform: scale(1);
+    }
+
+    .list-box-content {
+        padding-inline: 20px;
+    }
+
+    .list-box-content p {
+        font-size: 16px;
+    }
+
+    .list-box-content p ~ p {
+        font-size: 32px;
+    }
+
+    .list-box-content a {
+        padding: 8px 30px;
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    header .container {
+        padding: 10px;
+    }
+
+    .nav-items a {
+        padding-inline: 10px;
+        font-size: 14px;
+    }
+
+    .header-banner-content h2 {
+        font-size: 30px;
+    }
+
+    .header-banner-content h3 {
+        font-size: 14px;
+    }
+
+    .out-story {
+        width: 100%;
+        padding-block: 30px;
+    }
+
+    .timeline img {
+        width: 80px;
+        height: 120px;
+    }
+
+    .wedding-day-container .wedding-day .title {
+        font-size: 40px;
+    }
+
+    .list-box img {
+        transform: scale(1);
+    }
+
+    .list-box-content {
+        padding-inline: 10px;
+    }
+
+    .list-box-content p {
+        font-size: 14px;
+    }
+
+    .list-box-content p ~ p {
+        font-size: 28px;
+    }
+
+    .list-box-content a {
+        padding: 6px 20px;
+        font-size: 14px;
+    }
+
+    footer {
+        padding-block: 12px;
+    }
+
+    footer .footer-logo img {
+        width: 150px;
+    }
+
+    .back-to-top {
+        font-size: 40px;
+    }
 }
